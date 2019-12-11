@@ -25,6 +25,16 @@ void fila_insere(Fila *f, float v){
 	f->vet[f->n] = v;
 	f->n++;
 }	
+
+void fila_insere2(Fila *f, float v){
+	if(f->n == N){ // fila ta cheia
+		printf("Senha esgota . Volte outra hora! \n");
+		return;
+	}// caso contrario insere nova senha na fila
+	f->vet[f->n] = v;
+	f->n++;
+}	
+
 float fila_retira(Fila *f){
 	float v;
 	if(fila_vazia(f)){
