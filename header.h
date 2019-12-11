@@ -2,37 +2,38 @@
 #include <stdlib.h> 
 #define N 50 
 
-typedef struct{
-	int inicio, fim; //posição de retirada e posição de inserção 
+typedef struct fila{
+	int n, inicio; //posição de retirada e posição de inserção 
 	float vet[N]; 
 }Fila; 
 
 
 //função que cria a fila:
-Fila* cria_fila(void){
-	Fila* f = (Fila*)malloc(sizeof(Fila));
-	f->inicio = f->fim = 0; 
+Fila* cria_fila(){
+	Fila *f = (Fila*)malloc(sizeof(Fila));
+	f->n = 0;
+	f->inicio = 0;
 	return f;
 }
 
 //função  para inserir senha na fila
-void insere_fila(Fila* f, float v){
-// fila cheia : incrementa(fim) == inicio
+void fila_insere(Fila *f, float v){
+	if(f->n == N){ // fila ta cheia
 		printf("Senha esgota . Volte outra hora! \n");
-		exit(1);
+		return;
 	}// caso contrario insere nova senha na fila
-	f->vet[f->fim] = v;
-	f->fim = incrementa(f->fim);
+	f->vet[f->n] = v;
+	f->n++;
 }	
-float retira_fila(Fila *f){
+float fila_retira(Fila *f){
 	float v;
-	if(vazia(f){
+	if(fila_vazia(f)){
 		printf("A fila esta vazia.\n");
-		exit(1);
+		retunr -1;
 	}// retira o elemento da fila:
-	v = f->vet[f->inicio];
-	f->inicio = incrementa(f->inicio);
-	retunr v;
+v = f->vet[f->inicio];
+f->inicio++;
+retunr v;
 }
 
 //função que incrementa o vetor da fila:
@@ -44,20 +45,23 @@ int incrementa(int i){
 }
 
 // fila vazia: inicio == fim
-int vazia (Fila* f){
-	return (f->inicio == f-> fim);
+int fila_vazia (Fila *f){
+	return(f->inicio == 5 || f->n == 0);
 }
 
 //liberar espaço do elemento removido
-void libera (Fila* f){
+void fila_libera (Fila *f){
 	free(f);
 }
 
 //mostra os elemntos da fila:
-void imprime (Fila* f){
+void fila_imprime (Fila *f){
+	printf("Status da fila atual: \n");
 	int i;
-	for (i = f->inicio; i!=fim; i=incrementa(i)){
-		printf("%f\n", f->vet[i]);
+	for (i = f->inicio; i < f->n; i++){
+		printf("%0.f\n", f->vet[i]);
 	}
+	printf("%s\n", );
+	
 }
 
