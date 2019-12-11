@@ -22,7 +22,7 @@
  */
 
 #include <stdio.h>
-//#include "fila.h"
+#include "header.h"
 
 int main(int argc, char **argv){
 	
@@ -34,10 +34,8 @@ int main(int argc, char **argv){
 	}
 	fprintf(file, "\n altera dados no arquivo");
 	fwrite(f,sizeof(struct Fila),1,file);
-	printf("%i " , PR);
 	fclose(file);
- 	
-	return 0;
+ 	return 0;
 }
 
 void menu(){
