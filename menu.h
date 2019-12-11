@@ -46,11 +46,11 @@ void menuprincipal(){
 	// estrutura switch
 		switch (op) {
 			case 1:	
-			fila_imprime();
+			fila_imprime();///tem que  listar todas a senhas da fila
 			break;
 			
 			case 2:
-			fila_retira();
+			fila_retira();//chamar funçao retira elemnto da fila e retira o primeiro elemento da fila e reordenar a fila
 			break;
 			// opção padrão
 			default:

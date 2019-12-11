@@ -41,7 +41,8 @@ int main(int argc, char **argv){
 		return 0;
 	}
 	fprintf(file, "\n altera dados no arquivo");
-	fwrite(f,sizeof(struct Fila),1,file);
+	fwrite(Fila *fi=fila_cria);
+	fwrite(h.f_name, h.last, h.s,h.g ,sizeof(struct Fila),1,oput);
 	fclose(file);
  	return 0;
 }
