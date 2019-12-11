@@ -1,5 +1,5 @@
 # TrabalhoFinal
-Trabalkho final de estrutura de dados
+Trabalho final de estrutura de dados
 
 TAREFA:
 Trabalho de recuperação
@@ -23,3 +23,4 @@ Um programa gera as senhas de acordo com o tipo(prioritária ou normal< armazena
 Quando o programa do caixa le do arquivo o cliente da vez deve ser retirado da fila.
  
  
+Testando configuração de SSH
