@@ -25,8 +25,6 @@
 //#include "fila.h"
 
 int main(int argc, char **argv){
-	int op; 
-
 	
 	FILE *file;
 	file = fopen("senhas.txt", "a");
@@ -42,8 +40,8 @@ int main(int argc, char **argv){
 	return 0;
 }
 
-void menu{
-
+void menu(){
+	int op; 
 	printf("\n\n ----------------------- ");
 	printf("\n 1 - Opcao 1 ");
 	printf("\n 2 - Opcao 2 ");
@@ -55,7 +53,6 @@ void menu{
 
 // estrutura switch
 	switch (op) {
-
 		case 1:	
 		printf("\n\n Opcao escolhida: 1 ");
 		break;
@@ -63,7 +60,6 @@ void menu{
 		case 2:
 		printf("\n\n Opcao escolhida: 2 ");
 		break;
-
 
 		case 3:
 		printf("\n\n Opcao escolhida: 3 ");
@@ -77,18 +73,13 @@ void menu{
 		default:
 		// se for escolhida a opção 5, ele pula o while utilizando continue para isso 
 		if( escolha==5){
-			continue;
+		continue;
 				}
 				// caso o usuário digite um numero acima de 5, ele irá informar que nao existe essa opção
 		printf("\n\n Nenhuma opcao foi escolhida ");
 		break;
 		}
 
-}
-
-	if( escolha==5){
-	printf("\n\n O Programa foi fechado");
-	getch(); 
-
+	if( escolha==5) printf("\n\n O Programa foi fechado");
 }
 
